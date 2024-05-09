@@ -43,10 +43,6 @@ button:hover {
   background-color: #57BDDD;
   color: whitesmoke;
   }
-button:focus,
-button:focus-visible {
-  outline: 1px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {

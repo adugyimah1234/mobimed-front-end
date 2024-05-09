@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { FiAlignRight } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
+import { PiShoppingCartSimple } from "react-icons/pi";
+import { Link } from 'react-router-dom';
+
 function Navbar() {
 
     const [toggle,setToggle]=useState(false)
@@ -34,14 +37,16 @@ function Navbar() {
                     </div>
                 ))}
             </div>
+            <PiShoppingCartSimple className='hidden md:flex m-2'/>
+
             <div className='hidden md:flex'>
-                <h2 className='text-black hover:text-blue-400
+                <Link to="/login" target="_blank" className='text-black hover:text-blue-400
                             px-3 py-1 cursor-pointer'>LOGIN
-                </h2>
-                <h2 className='hover:text-blue-400
+                </Link>
+                <Link to="/signup" target="_blank" className='hover:text-blue-400
                             px-3 py-1 cursor-pointer'><button className='px-3 py-0 bg-[#57BDDD] border-r-4
                             p-2 text-white'>SIGNUP</button>
-                </h2>
+                </Link>
             </div>
             <div className='md:hidden'>
               { !toggle ? <FiAlignRight onClick={()=>setToggle(!toggle)} className="text-black cursor-pointer"/>

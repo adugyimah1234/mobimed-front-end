@@ -12,7 +12,6 @@ const FAQ = () => {
     <div
       className="relative w-full h-full box-border flex flex-col items-center justify-center"
       style={{
-        backgroundColor: '#f7f7f7',
         borderRadius: '1rem',
         padding: '2rem',
         boxShadow: '0 0 1rem rgba(0, 0, 0, 0.1)',
@@ -20,7 +19,7 @@ const FAQ = () => {
       }}
     >
       <p
-        className="text-3xl md:text-4xl lg:text-5xl leading-9 font-thicccboi font-[700]"
+        className="text-3xl md:text-4xl lg:text-5xl leading-9 font-thicccboi font-[900]"
         style={{
           marginBottom: '1rem',
           transition: 'all 0.3s ease-in-out',
@@ -29,7 +28,7 @@ const FAQ = () => {
         FAQ
       </p>
       <p
-        className="text-xl md:text-2xl lg:text-3xl leading-5 md:leading-7 lg:leading-9 font-labil-grotesk-trial font-[300]"
+        className="text-xl md:text-2xl lg:text-3xl leading-5 md:leading-7 lg:leading-9 font-labil-grotesk-trial font-[400]"
         style={{
           marginBottom: '2rem',
           transition: 'all 0.3s ease-in-out',
@@ -67,7 +66,7 @@ const FAQ = () => {
             </p>
             {showFAQ && (
               <p
-                className="text-xl md:text-2xl lg:text-3xl leading-5 md:leading-7 lg:leading-9 font-labil-grotesk-trial font-[300] opacity-50"
+                className="text-xl md:text-2xl lg:text-3xl leading-5 md:leading-7 lg:leading-9 font-labil-grotesk-trial font-[600] opacity-60"
                 style={{
                   animation: 'fade-in 0.5s ease-in-out',
                   transition: 'all 0.3s ease-in-out',

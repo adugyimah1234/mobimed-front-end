@@ -10,7 +10,7 @@ function Aboutsection() {
       </p>
     </div>
     <div className=" flex flex-col justify-start items-center gap-4 w-[100%] box-border">
-      <p className=" flex flex-col justify-center  border-[#222222ff]  text-[64px]  leading-[120%]  font-sarabun  font-[600] text-center uppercase">
+      <p className=" flex flex-col justify-center  border-[#222222ff]  text-[50px]  leading-[120%]  font-sarabun  font-[600] text-center uppercase">
        <span> the <span className="text-[#57BDDD]">best</span> Pharmacy services</span>
       </p>
     </div>

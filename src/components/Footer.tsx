@@ -49,7 +49,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-black py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
             <img
