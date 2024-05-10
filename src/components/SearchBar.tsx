@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MdAddShoppingCart, MdFileUpload } from "react-icons/md";
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 interface Medication {
   name: string;
@@ -12,16 +12,16 @@ interface Medication {
 
 const MedicationCard = ({ result }: { result: Medication }) => {
   return (
-<div className="bg-white shadow-md rounded-md p-12 flex flex-col items-center justify-center">
+    <div className="bg-white shadow-md rounded-md p-12 flex flex-col items-center justify-center">
       <h3 className="text-lg font-bold text-gray-800">{result.name}</h3>
       <p className="text-gray-600 text-sm">{result.description}</p>
       <div className="flex items-center justify-between w-full mt-4">
         <p className="text-gray-600 text-sm">Price: <span className="font-bold">{result.price}</span></p>
         <p className="text-gray-600 text-sm">Manufacturer: <span className="font-bold">{result.manufacturer}</span></p>
       </div>
-      <Link to="/cart" className="px-3 py-1 rounded-md text-center mt-4"><MdAddShoppingCart className="w-5 h-5" />
-      </Link>
-          
+      <NavLink to="/cart" className="px-3 py-1 rounded-md text-center mt-4"><MdAddShoppingCart className="w-5 h-5" />
+      </NavLink>
+
     </div>
   );
 };
@@ -33,7 +33,7 @@ const SearchBar = () => {
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
     setSearchQuery(query);
-  
+
     // Simulate search results
     const results: Medication[] = [];
     if (query.length > 2) {
@@ -73,9 +73,10 @@ const SearchBar = () => {
         <button type="submit" className="bg-[#57BDDD] text-white px-4 py-2 rounded-md hover:bg-blue-600">
           Medication Search
         </button>
-        <button className="bg-[#57BDDD] text-white px-4 py-2 rounded-md hover:bg-blue-600">
+        <label className="bg-[#57BDDD] text-white px-4 py-4 rounded-md hover:bg-blue-600" htmlFor="fileInput">
           <MdFileUpload />
-        </button>
+        </label>
+        <input id="fileInput" type="file" accept=".pdf, .jpg, .jpeg, .png, .gif" className="hidden" />
       </form>
       {searchResults.length > 0 ? ( // Added a check for empty search results
         <div className="flex items-start">
