@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaLocationArrow, FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
   const socialMediaLinks = [
@@ -34,15 +34,15 @@ const Footer = () => {
 
   const getInTouch = [
     {
-      title: "info@8pxlstudio",
-      link: "mailto:info@8pxlstudio",
-    },
-    {
-      title: "+0123456789",
+      title: <><FaPhone /> +0123456789</>,
       link: "tel:+0123456789",
     },
     {
-      title: "021 Hollywood Boulevard, LA",
+      title: <><FaEnvelope /> info@8pxlstudio</>,
+      link: "mailto:info@8pxlstudio",
+    },
+    {
+      title: <><FaLocationArrow /> 021 Hollywood Boulevard, LA</>,
       link: "#",
     },
   ];
@@ -84,14 +84,14 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
             <h5 className="text-lg font-bold">Join Our Company</h5>
-            <form>
+            <form className="flex">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full p-2 pl-10 text-sm text-gray-700"
+                className="w-full p-2 pl-10 text-sm text-white  border-none"
               />
-              <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
-                Join
+              <button className="bg-[#1E1E1E] hover:bg-[#57bddd] text-white font-bold border none">
+                <FaArrowRight />
               </button>
             </form>
             <div className="flex justify-center mt-4">
@@ -108,6 +108,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="border-b border-white"></div>
       <p className="text-center text-gray-600">
         © 2025 Unpack. All Rights Reserved.
       </p>

@@ -2,11 +2,10 @@
 function Navbar() {
 
     return (
-        <nav
-   className=" flex items-center justify-between mx-auto text-blue-gray-900">
+        <nav className=" flex items-between justify-between mx-auto text-blue-gray-900">
     <a href="/"
       className="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased">
-      <img src="src/assets/logo.png" className="min-w-[50%]"/>
+      <img src="src/assets/logo.png" className="max-w-[50%]"/>
     </a>
     <div className="hidden lg:block">
       <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">

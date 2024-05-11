@@ -4,22 +4,22 @@ import Navbar from '../components/Navbar';
 function Services() {
   const serviceItems = [
     {
-      image: '(link unavailable)',
+      image: 'src/assets/uploadPrescription.png',
       title: 'Upload Prescription',
       subtitle: 'Step 1',
       description: 'Begin by uploading your prescription on our user-friendly website. Ensure that the prescription is clear and includes all necessary details.',
     },
     {
       image: '(link unavailable)',
-      title: 'Consult a Doctor',
+      title: 'Checkout & Payment',
       subtitle: 'Step 2',
-      description: 'Our team of experienced doctors will review your prescription and provide a personalized consultation.',
+      description: 'Once processed, your order is dispatched promptly, and you can track its real-time progress, ensuring transparency and timely delivery.',
     },
     {
-      image: '(link unavailable)',
-      title: 'Get Your Medication',
+      image: 'src/assets/dispatch.png',
+      title: 'Dispatch & Tracking',
       subtitle: 'Step 3',
-      description: 'Once your consultation is complete, we will dispense your medication and have it shipped directly to your doorstep.',
+      description: 'Once processed, your order is dispatched promptly, and you can track its real-time progress, ensuring transparency and timely delivery.',
     },
   ];
 
@@ -29,7 +29,7 @@ function Services() {
       {serviceItems.map((item, index) => (
         <div key={index} className="w-full  mx-auto flex bg-white text-gray-700 shadow-md ">
           <div
-            className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+            className="relative w-[50%] m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
             <img
               src={item.image}
               alt="card-image" className="object-cover w-full h-full" />

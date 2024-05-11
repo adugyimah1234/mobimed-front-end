@@ -19,8 +19,6 @@ function Hero() {
         </div>
       </div>
 
-      <div className='flex justify-center'>
-        <div className='flex w-full md:w-1/2 lg:w-1/3'>
           <div className=' flex w-[100%]  md:w-1/2 lg:w-1/3'>
             <img
               src="src/assets/img2.jpg"
@@ -32,8 +30,6 @@ function Hero() {
               className=' py-20 w-[100%] md:-1/2 lg:w-1/3'
             />
           </div>
-        </div>
-      </div>
     </div>
   );
 }

@@ -1,88 +1,42 @@
-import React, { useState } from 'react';
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import React from 'react';
 
 const FAQ = () => {
-  const [showFAQ, setShowFAQ] = useState(false);
-
-  const toggleFAQ = () => {
-    setShowFAQ(!showFAQ);
-  };
-
   return (
     <div
-  className="relative w-full h-full flex flex-col items-center justify-center"
-  style={{
-    maxWidth: '600px',
-    padding: '2rem',
-    borderRadius: '1rem',
-    boxShadow: '0 0 1rem rgba(0, 0, 0, 0.1)',
-  }}
->
-  <p
-    className="text-lg font-bold"
-    style={{
-      marginBottom: '1rem',
-    }}
-  >
-    FAQ
-  </p>
-  <p
-    className="text-md"
-    style={{
-      marginBottom: '2rem',
-    }}
-  >
-    Our licensed pharmacists are available to answer any questions you may have.
-  </p>
-  <div
-    className="flex flex-col w-full"
-    style={{
-      backgroundColor: '#fff',
-      borderRadius: '1rem',
-      padding: '2rem',
-      boxShadow: '0 0 1rem rgba(0, 0, 0, 0.1)',
-    }}
-  >
-    <div
-      className="flex flex-row justify-between w-full"
-      style={{
-        marginBottom: '2rem',
-      }}
+      className="container mx-auto p-4 pt-6 md:p-6 lg:p-12"
     >
-      <div className="flex flex-col h-full">
-        <p
-          className="text-md font-bold"
-          style={{
-            marginBottom: '1rem',
-          }}
-        >
-          What is Pharmco and how do I use it?
-        </p>
-        {showFAQ && (
-          <p
-            className="text-sm"
-            style={{
-              marginBottom: '1rem',
-            }}
-          >
-            At our pharmacy, we believe that taking care of your health should never be a hassle. So whether you're managing a chronic condition or just looking for ways to improve your overall wellness, we're here to help you every step of the way. Thank you for choosing us as your trusted source for all of your healthcare needs.
-          </p>
-        )}
-      </div>
-      <div
-        className="cursor-pointer"
-        onClick={toggleFAQ}
+      <p
+        className="text-lg font-bold mb-4 md:text-xl lg:text-2xl block"
       >
-        {showFAQ ? (
-          <FaMinus className="w-3.5 h-3.5" />
-        ) : (
-          <FaPlus className="w-3.5 h-3.5" />
-        )}
+        FAQ
+      </p>
+      <p
+        className="text-md mb-8 md:text-lg lg:text-xl block"
+      >
+        Our licensed pharmacists are available to answer any questions you may have.
+      </p>
+      <div
+        className="flex flex-col w-full md:w-1/2 lg:w-1/3"
+      >
+        <div
+          className="flex flex-row justify-between w-full block"
+        >
+          <div className="flex flex-col h-full block">
+            <p
+              className="text-md font-bold mb-4 md:text-lg lg:text-xl block"
+            >
+              What is Pharmco and how do I use it?
+              <p
+                className="text-sm mb-4 md:text-md lg:text-lg block"
+              >
+                At our pharmacy, we believe that taking care of your health should never be a hassle. So whether you're managing a chronic condition or just looking for ways to improve your overall wellness, we're here to help you every step of the way. Thank you for choosing us as your trusted source for all of your healthcare needs.
+              </p>
+            </p>
+          </div>
+        </div>
+        {/* Repeat the FAQ items */}
       </div>
     </div>
-    {/* Repeat the FAQ items */}
-  </div>
-</div>
   );
 };
 
