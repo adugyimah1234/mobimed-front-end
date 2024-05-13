@@ -78,7 +78,7 @@ const PrescriptionHistory: React.FC = () => {
                 <td className="px-4 py-2">{prescription.time}</td>
                 <td className="px-4 py-2">{prescription.pharmacy}</td>
                 <td className="px-4 py-2">{prescription.prescription}</td>
-                <td className="px-4 py-2 text-blue-500 hover:text-blue-700">Track>></td>
+                <td className="px-4 py-2 text-blue-500 hover:text-blue-700">Track &gt,</td>
               </tr>
             ))}
           </tbody>

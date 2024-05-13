@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'react'
 import { FaFacebook, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaLocationArrow, FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
@@ -48,7 +49,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black py-12">
+    <footer className="bg-black py-12 w-full px-12">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
@@ -59,11 +60,11 @@ const Footer = () => {
             />
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-            <h5 className="text-lg font-bold">Company</h5>
+            <h5 className="text-lg font-bold text-white">Company</h5>
             <ul className="list-none mb-0">
               {companyInfo.map((item, index) => (
                 <li key={index}>
-                  <a href={item.link} className="text-gray-600 hover:text-gray-800">
+                  <a href={item.link} className="font-medium text-[#dadada] text-gray-600 text-whitesmoke hover:text-gray-800">
                     {item.title}
                   </a>
                 </li>
@@ -71,11 +72,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-            <h5 className="text-lg font-bold">Get in Touch</h5>
-            <ul className="list-none mb-0">
+            <h5 className="text-lg font-bold text-white">Get in Touch</h5>
+            <ul className="list-none mb-0 ">
               {getInTouch.map((item, index) => (
                 <li key={index}>
-                  <a href={item.link} className="text-gray-600 hover:text-gray-800">
+                  <a href={item.link} className="flex gap-2 text-[#dadada] hover:text-gray-800">
                     {item.title}
                   </a>
                 </li>
@@ -83,16 +84,16 @@ const Footer = () => {
             </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-            <h5 className="text-lg font-bold">Join Our Company</h5>
-            <form className="flex">
+            <h5 className="text-lg font-bold text-white p-2 text-left">Join Our Company</h5>
+            <form className="flex ">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full p-2 pl-10 text-sm text-white  border-none"
+                className="w-full p-2 pl-10 text-sm text-white bg-[#1f1f21] border-none"
               />
-              <button className="bg-[#1E1E1E] hover:bg-[#57bddd] text-white font-bold border none">
+              <a className="bg-[#000000] hover:bg-[#57bddd] text-white font-bold border-slate-800 p-2 py-2">
                 <FaArrowRight />
-              </button>
+              </a>
             </form>
             <div className="flex justify-center mt-4">
               {socialMediaLinks.map((item, index) => (
@@ -108,8 +109,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-b border-white"></div>
-      <p className="text-center text-gray-600">
+      <div className="border-b border-whitesmoke"></div>
+      <p className="text-center text-gray-600 p-10">
         © 2025 Unpack. All Rights Reserved.
       </p>
     </footer>

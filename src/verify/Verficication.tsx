@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 interface VerificationProps {
   phoneNumber: string;
   onVerify: (code: string) => void;
-  on resendCode: () => void;
+  onResendCode: () => void;
 }
 
 const Verification: React.FC<VerificationProps> = ({

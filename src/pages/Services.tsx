@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function Services() {
   const serviceItems = [
@@ -10,7 +11,7 @@ function Services() {
       description: 'Begin by uploading your prescription on our user-friendly website. Ensure that the prescription is clear and includes all necessary details.',
     },
     {
-      image: '(link unavailable)',
+      image: 'src/assets/payout.png',
       title: 'Checkout & Payment',
       subtitle: 'Step 2',
       description: 'Once processed, your order is dispatched promptly, and you can track its real-time progress, ensuring transparency and timely delivery.',
@@ -56,6 +57,7 @@ function Services() {
           </div>
         </div>
       ))}
+      <Footer />
     </div>
   );
 }

@@ -1,54 +1,89 @@
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <nav className=" flex items-between justify-between mx-auto text-blue-gray-900">
-    <a href="/"
-      className="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased">
-      <img src="src/assets/logo.png" className="max-w-[50%]"/>
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
+
+  const navLinks = [
+    { href: '/home', label: 'HOME' },
+    { href: '/services', label: 'SERVICES' },
+    { href: '/contact', label: 'CONTACT' },
+  ];
+
+  const loginButton = (
+    <a
+      href="/login"
+      className="hidden lg:flex px-4 py-2 font-sans text-sm font-medium text-white rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+    >
+      Log In
     </a>
-    <div className="hidden lg:block">
-      <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-        <li
-          className="flex items-center p-1 font-sans text-sm antialiased font-medium leading-normal gap-x-2 text-blue-gray-900">
+  );
 
-          <a href="/home" className="flex items-center">
-            HOME
-          </a>
-        </li>
-        <li
-          className="flex items-center p-1 font-sans text-sm antialiased font-medium leading-normal gap-x-2 text-blue-gray-900">
+  const signupButton = (
+    <a
+      href="/signup"
+      className="hidden ml-2 lg:flex px-4 py-2 font-sans text-sm font-medium text-white rounded-md bg-gradient-to-tr from-[#57BDDD] to-[#62c2df] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+    >
+      Sign In
+    </a>
+  );
 
-          <a href="/services" className="flex items-center">
-            SERVICES
+  return (
+    <nav className="flex items-center justify-between px-4 py-2 bg-whitesmoke shadow-md lg:px-8">
+      <a href="/" className="block cursor-pointer">
+        <img src="src/assets/logo.png" alt="Logo" className="max-w-[50%] h-auto" />
+      </a>
+      <div className={`hidden ${isDesktopOrLaptop ? 'lg:flex' : 'lg:hidden'}`}>
+        {navLinks.map((link) => (
+          <a key={link.href} href={link.href} className="text-gray-700 hover:text-black font-medium">
+            {link.label}
           </a>
-        </li>
-        <li
-          className="flex items-center p-1 font-sans text-sm antialiased font-medium leading-normal gap-x-2 text-blue-gray-900">
-  
-          <a href="contact" className="flex items-center">
-            CONTACT
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div className="flex items-center gap-x-1">
-        <a className="hidden px-4 py-2 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-        type="button" href="/login">Log In</a>
-        <a className="hidden select-none rounded-lg bg-gradient-to-tr from-[#57BDDD] to-[#62c2df] py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-        type="button" href="/signup">Sign in</a>
-    </div>
-    <button
-      className="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-      type="button">
-      <span className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </span>
-    </button>
-</nav> 
-    )
+        ))}
+      </div>
+      <div className={"lg:hidden ${isOpen ? 'block' : 'hidden'}"}>
+        <button
+          className={`focus:outline-none ${isOpen ? '' : 'bg-transparent'}`}
+          onClick={handleToggle}
+        >
+          <svg
+            className="h-6 w-6 text-gray-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            {isOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            )}
+          </svg>
+        </button>
+        {isOpen && (
+          <ul className={` top-full mt-2 py-2 w-auto bg-white shadow-md rounded-md z-50 ${isOpen ? '' : 'hidden lg:block'
+            }`}>
+            {navLinks.map((link) => (
+              <li key={link.href} className="px-4 py-1 hover:bg-gray-100">
+                <a href={link.href} className=" text-gray-700 block font-medium">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className="flex items-center ">
+        {loginButton}
+        {signupButton}
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
