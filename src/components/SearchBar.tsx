@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { MdAddShoppingCart, MdFileUpload } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
-import medicationImage1 from '../assets/icon.png'; // Import images for medications
-import medicationImage2 from '../assets/icon.png'; // Import images for medications
+import medicationImage1 from '../assets/medication 1.jpg'; // Import images for medications
+import medicationImage2 from '../assets/medication 2.jpeg'; // Import images for medications
 
 interface Medication {
   name: string;
@@ -26,7 +26,7 @@ const MedicationCard = ({ result }: { result: Medication }) => {
   };
 
   return (
-    <div className={`bg-white shadow-md rounded-md p-4 flex flex-col items-center justify-center ${isFavorite ? 'esFav' : ''} ${isInCart ? 'enCarrito' : ''}`}>
+    <div className={`bg-white shadow-md rounded-md p-4 flex flex-col items-center justify-start ${isFavorite ? 'esFav' : ''} ${isInCart ? 'enCarrito' : ''}`}>
       <img src={result.image} alt={result.name} className="w-24 h-24 object-cover rounded-full mb-2" />
       <h3 className="text-lg font-bold text-gray-800">{result.name}</h3>
       <p className="text-gray-600 text-sm">{result.description}</p>
@@ -34,7 +34,7 @@ const MedicationCard = ({ result }: { result: Medication }) => {
         <p className="text-gray-600 text-sm">Price: <span className="font-bold">{result.price}</span></p>
         {result.discountedPrice && (
           <p className="text-gray-600 text-sm">Discounted Price: <span className="font-bold">{result.discountedPrice}</span></p>
-        )}
+        )}e
         <p className="text-gray-600 text-sm">Manufacturer: <span className="font-bold">{result.manufacturer}</span></p>
       </div>
       <div className="mt-2 flex items-center justify-center">
@@ -44,7 +44,7 @@ const MedicationCard = ({ result }: { result: Medication }) => {
           </svg>
         </div>
         <div className={`action alCarrito w-6 h-6 ml-4 ${isInCart ? 'text-blue-500' : 'text-gray-500'}`} onClick={toggleCart}>
-          <NavLink to="/cart" className="px-3 py-1 rounded-md text-center bg-blue-500 text-white">
+          <NavLink to="/cart" className=" text-center bg-blue-500 text-black">
             <MdAddShoppingCart className="w-5 h-5" />
           </NavLink>
         </div>
@@ -91,7 +91,7 @@ const SearchBar = () => {
         <span className="text-black">BUY DRUG</span>
         <span className="text-[#57BDDD]">/SEARCH MEDICATION</span>
       </h2>
-      <form className="flex flex-row items-stretch justify-center space-x-5 w-full">
+      <form className="flex flex-row justify-items-center contain-layout- justify-center space-x-5 w-full">
         <input
           className="p-2 border border-gray-300 rounded-md focus:outline-none hover:border-black-500 w-6/12"
           type="text"
@@ -99,18 +99,18 @@ const SearchBar = () => {
           value={searchQuery}
           onChange={handleSearch}
         />
-        <button type="submit" className="bg-[#57BDDD] text-white px-4 py-2 rounded-md hover:bg-blue-600">
+        <button type="submit" className="bg-[#57BDDD] text-white px-4 py-2 rounded-md hover:bg-blue-600 flex flex-grow-">
           Medication Search
         </button>
-        <label className="bg-[#57BDDD] text-white px-4 py-4 rounded-md hover:bg-blue-600" htmlFor="fileInput">
+        <label className="bg-[#57BDDD] text-white px-2 py-4 rounded-md hover:bg-blue-600" htmlFor="fileInput">
           <MdFileUpload />
         </label>
         <input id="fileInput" type="file" accept=".pdf, .jpg, .jpeg, .png, .gif" className="hidden" />
       </form>
       {searchResults.length > 0 ? (
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-start">
           {searchResults.map((result) => (
-            <div key={result.name} className="w-48 mx-2 mb-4">
+            <div key={result.name} className="w-[15.2rem] lg:p-5 p-5">
               <MedicationCard result={result} />
             </div>
           ))}
