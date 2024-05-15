@@ -7,59 +7,139 @@ function Services() {
     {
       image: 'src/assets/uploadPrescription.png',
       title: 'Upload Prescription',
-      subtitle: 'Step 1',
-      description: 'Begin by uploading your prescription on our user-friendly website. Ensure that the prescription is clear and includes all necessary details.',
+      description: 'Start your journey to better health by uploading your prescription to our secure platform. Our user-friendly interface makes it easy to upload and manage your prescriptions, so you can focus on what matters most - your health.',
     },
     {
       image: 'src/assets/payout.png',
       title: 'Checkout & Payment',
-      subtitle: 'Step 2',
-      description: 'Once processed, your order is dispatched promptly, and you can track its real-time progress, ensuring transparency and timely delivery.',
+      description: 'Our streamlined checkout process makes it easy to pay for your medications. We accept a variety of payment methods, including credit cards, debit cards, and online payment services. Plus, our secure payment processing ensures your information is protected.',
     },
     {
       image: 'src/assets/dispatch.png',
       title: 'Dispatch & Tracking',
-      subtitle: 'Step 3',
-      description: 'Once processed, your order is dispatched promptly, and you can track its real-time progress, ensuring transparency and timely delivery.',
+      description: 'Once your order is processed, our team works quickly to dispatch your medications. You can track the status of your order in real-time, so you always know when to expect your delivery.',
+    },
+    {
+      image: 'src/assets/searchMedications.png',
+      title: 'Search for Medications',
+      subtitle: '',
+      description: 'Find the medications you need quickly and easily with our advanced search feature. Filter results by name, ingredient, or condition to find the perfect match for your needs.',
+    },
+    {
+      image: 'src/assets/deliveryOptions.png',
+      title: 'Delivery Options',
+      description: 'Choose from a range of delivery options to suit your needs. Whether you prefer standard shipping, express shipping, or in-store pickup, we got you covered.',
+    },
+    {
+      image: 'src/assets/customerSupport.png',
+      title: 'Customer Support',
+      description: "Our dedicated customer support team is here to help. Whether you have questions about your order, need help with a prescription, or just need some advice, we've always here to assist you.",
+    },
+    {
+      image: 'src/assets/securityPrivacy.png',
+      title: 'Security and Privacy',
+      description: 'We take your security and privacy seriously. Our platform uses state-of-the-art encryption and secure servers to protect your information, so you can feel confident when shopping with us.',
+    },
+    {
+      image: 'src/assets/refundCancellation.png',
+      title: 'Refund and Cancellation Policy',
+      description: "We want you to be completely satisfied with your purchase. If for any reason you're not happy, we offer a flexible refund and cancellation policy to help you get the resolution you need.",
     },
   ];
 
   return (
-    <div>
+    <div className="container mx-auto pt-2 pb-1 bg-white shadow-md">
       <Navbar />
+      <img src="src/assets/servicehero.png" className='bg-cover'/>
+      <div className="text-center mb-5 mt-10 items-start">
+        <h2 className=" text-3xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
+          Our Services
+        </h2>
+        <p className=" text-base antialiased font-normal leading-relaxed text-gray-700">
+          We offer a range of services to make your experience with us seamless and convenient.
+        </p>
+      </div>
       {serviceItems.map((item, index) => (
-        <div key={index} className="w-full  mx-auto flex bg-white text-gray-700 shadow-md ">
-          <div
-            className="relative w-[50%] m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
-            <img
-              src={item.image}
-              alt="card-image" className="object-cover w-full h-full" />
-          </div>
-          <div className="p-6">
+        <div
+          key={index}
+          className="flex flex-wrap justify-center mb-12"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          {index % 2 === 0 ? (
+            <div
+              className="relative w-full md:w-1/2 xl:w-1/3 p-6 text-center"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <img
+                src={item.image}
+                alt="card-image"
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
+          ) : (
+            <div
+              className="w-full md:w-1/2 xl:w-2/3 p-6 text-lg"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h6
+                className="block mb-4  text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase"
+              >
+                {item.subtitle}
+              </h6>
+              <h4
+                className="block mb-2 text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+              >
+                {item.title}
+              </h4>
+              <p
+                className="block mb-8 text-base antialiased font-normal leading-relaxed text-gray-700"
+              >
+                {item.description}
+              </p>
+            </div>
+          )}
+          {index % 2 !== 0 ? (
+            <div
+              className="relative w-full md:w-1/2 xl:w-1/3 p-6 text-center"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <img
+                src={item.image}
+                alt="card-image"
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
+          ) : (            <div
+            className="w-full md:w-1/2 xl:w-2/3 p-6 text-lg"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <h6
-              className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase">
-              <svg xmlns="(link unavailable)" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2" className="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-              </svg>
+              className="block mb-4 text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase"
+            >
               {item.subtitle}
             </h6>
-            <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            <h4
+              className="block mb-2 text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900"
+            >
               {item.title}
             </h4>
-            <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
+            <p
+              className="block mb-8 text-base antialiased font-normal leading-relaxed text-gray-700"
+            >
               {item.description}
             </p>
-            <a href="#" className="inline-block"><button
-              className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
-              type="button">
-              Next </button></a>
           </div>
-        </div>
-      ))}
-      <Footer />
-    </div>
-  );
+        )}
+      </div>
+    ))}
+    <Footer />
+  </div>
+);
 }
 
 export default Services;
