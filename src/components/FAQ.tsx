@@ -5,7 +5,7 @@ const FAQ = () => {
 
   return (
     <div
-      className="container mx-full p-4 pt-6 md:p-6 lg:p-12 w-full"
+      className=" p-12 flex flex-col items-center justify-center  w-auto"
     >
       <h2
         className="text-lg font-bold mb-4 md:text-xl lg:text-2xl block text-center"
@@ -25,20 +25,20 @@ const FAQ = () => {
         >
           <div className="flex flex-col h-full block w-full">
             <h3
-              className="text-md font-bold mb-4 md:text-lg lg:text-xl block text-between"
+              className=" cursor-pointer text-md font-bold mb-4 md:text-lg lg:text-xl block text-between"
               onClick={() => setActiveQuestion(1)}
             >
               What is Pharmco and how do I use it?
             </h3>
             {activeQuestion === 1 && (
               <p
-                className="text-sm mb-4 md:text-md lg:text-lg block text-bettween"
+                className=" cursor-pointer text-sm mb-4 md:text-md lg:text-lg block text-bettween"
               >
                 At our pharmacy, we believe that taking care of your health should never be a hassle. So whether you're managing a chronic condition or just looking for ways to improve your overall wellness, we're here to help you every step of the way. Thank you for choosing us as your trusted source for all of your healthcare needs.
               </p>
             )}
           </div>
-          <div className="flex justify-center">
+          <div className=" cursor-pointer flex justify-center">
             {activeQuestion === 1 ? (
               <svg
                 className="w-6 h-6 text-gray-600"
@@ -74,7 +74,7 @@ const FAQ = () => {
         >
           <div className="flex flex-col h-full block w-full">
             <h3
-              className="text-md font-bold mb-4 md:text-lg lg:text-xl block text-between"
+              className="cursor-pointer text-md font-bold mb-4 md:text-lg lg:text-xl block text-between"
               onClick={() => setActiveQuestion(2)}
             >
               How do I place an order?
@@ -87,7 +87,7 @@ const FAQ = () => {
               </p>
             )}
           </div>
-          <div className="flex justify-center">
+          <div className="cursor-pointer flex justify-center">
             {activeQuestion === 2 ? (
               <svg
                 className="w-6 h-6 text-gray-600"
