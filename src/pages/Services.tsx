@@ -20,37 +20,37 @@ function Services() {
       description: 'Once your order is processed, our team works quickly to dispatch your medications. You can track the status of your order in real-time, so you always know when to expect your delivery.',
     },
     {
-      image: 'src/assets/searchMedications.png',
+      image: 'src/assets/searchMedications.jpg',
       title: 'Search for Medications',
       subtitle: '',
       description: 'Find the medications you need quickly and easily with our advanced search feature. Filter results by name, ingredient, or condition to find the perfect match for your needs.',
     },
     {
-      image: 'src/assets/deliveryOptions.png',
+      image: 'src/assets/deliveryOptions.jpg',
       title: 'Delivery Options',
       description: 'Choose from a range of delivery options to suit your needs. Whether you prefer standard shipping, express shipping, or in-store pickup, we got you covered.',
     },
     {
-      image: 'src/assets/customerSupport.png',
+      image: 'src/assets/customerSupport.jpg',
       title: 'Customer Support',
       description: "Our dedicated customer support team is here to help. Whether you have questions about your order, need help with a prescription, or just need some advice, we've always here to assist you.",
     },
     {
-      image: 'src/assets/securityPrivacy.png',
+      image: 'src/assets/securityPrivacy.jpg',
       title: 'Security and Privacy',
       description: 'We take your security and privacy seriously. Our platform uses state-of-the-art encryption and secure servers to protect your information, so you can feel confident when shopping with us.',
     },
     {
-      image: 'src/assets/refundCancellation.png',
+      image: 'src/assets/refundCancellation.jpg',
       title: 'Refund and Cancellation Policy',
       description: "We want you to be completely satisfied with your purchase. If for any reason you're not happy, we offer a flexible refund and cancellation policy to help you get the resolution you need.",
     },
   ];
 
   return (
-    <div className="container mx-auto pt-2 pb-1 bg-white shadow-md">
+    <div className=" mx-auto pt-2 pb-1     bg-white shadow-md">
       <Navbar />
-      <img src="src/assets/servicehero.png" className='bg-cover'/>
+      <img src="src/assets/servicehero.png" className='bg-cover flex justify-center items-center'/>
       <div className="text-center mb-5 mt-10 items-start">
         <h2 className=" text-3xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
           Our Services
@@ -62,7 +62,7 @@ function Services() {
       {serviceItems.map((item, index) => (
         <div
           key={index}
-          className="flex flex-wrap justify-center mb-12"
+          className="flex flex-wrap max-w-5xl0 items-center justify-center mb-12 px-50"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -75,7 +75,7 @@ function Services() {
               <img
                 src={item.image}
                 alt="card-image"
-                className="object-cover w-full h-full rounded-lg"
+                className="object-cover w-auto h-auto rounded-lg"
               />
             </div>
           ) : (
@@ -110,7 +110,7 @@ function Services() {
               <img
                 src={item.image}
                 alt="card-image"
-                className="object-cover w-full h-full rounded-lg"
+                className="object-cover w-auto h-auto rounded-lg"
               />
             </div>
           ) : (            <div

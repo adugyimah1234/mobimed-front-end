@@ -17,8 +17,8 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-100 py-30">
-        <div className="bg-[#57BDDD] text-white py-16 px-20 flex justify-center items-center">
+      <div className="bg-gray-100 py-10">
+        <div className="bg-[#2c9dc0] text-white py-16 px-20 flex justify-center items-center">
           <h1 className="text-4xl font-bold p-20">Contact Us</h1>
         </div>
         <div className="bg-black border radius-23 p-23 flex">
@@ -71,7 +71,7 @@ function Contact() {
                   </label>
                   <textarea
                     id="message"
-                    rows=""
+                    rows="adugyimah6776@gmail.com"
                     className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     required
                   ></textarea>
