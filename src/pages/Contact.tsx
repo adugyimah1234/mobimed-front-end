@@ -8,30 +8,31 @@ interface ContactInfo {
 }
 
 const contactInfo: ContactInfo[] = [
-  { title: 'Email', content: 'info@yourclinic.com' },
-  { title: 'Phone Number', content: '(555) 555-5555' },
-  { title: 'Address', content: '123 Main Street, Anytown, CA 12345' },
+  { title: 'Email', content: 'info@mobimedgh.com' },
+  { title: 'Phone Number', content: '+(233) 557 804 447' },
+  { title: 'Address', content: 'Osu, Ako-Adjei Opposite Kingdom Books & Stationery' },
 ];
 
 function Contact() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-100 py-10">
-        <div className="bg-[#2c9dc0] text-white py-16 px-20 flex justify-center items-center">
-          <h1 className="text-4xl font-bold p-20">Contact Us</h1>
+      <div className="bg-gray-100 py-0 pd-5">
+      <div
+          className="relative bg-[#2c9dc0] text-white py-16 px-20 flex justify-start items-center bg-cover bg-center"
+          style={{ backgroundImage: 'url(src/assets/image.png)' }}
+        >
+          <h1 className="text-black text-5xl font-bold p-20  relative">
+            Contact Us
+            <span className="absolute right-20 left-0 bottom-10 w-50% h-1 bg-white -mt-0"></span>
+          </h1>
         </div>
-        <div className="bg-black border radius-23 p-23 flex">
-        </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 p-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="lg:col-span-1">
               <h2 className="text-3xl font-bold text-gray-800 mb-8">Contact Us</h2>
               <p className="text-gray-600 leading-loose">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor quis diam pulvinar elementum. Aenean lacinia bibendum nulla sed consectetur.
-              </p>
-              <p className="text-gray-600 leading-loose mt-4">
-                Suspendisse potenti. Nulla facilisi. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              Get in touch with us for any inquiries, feedback, or support. We're here to help!
               </p>
               <ul className="mt-6 list-disc space-y-2">
                 {contactInfo.map((info) => (
@@ -71,7 +72,7 @@ function Contact() {
                   </label>
                   <textarea
                     id="message"
-                    rows="adugyimah6776@gmail.com"
+                    rows={5} // Use a number for the rows attribute
                     className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     required
                   ></textarea>
@@ -93,8 +94,3 @@ function Contact() {
 }
 
 export default Contact;
-
-
-
-
-

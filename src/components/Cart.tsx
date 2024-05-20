@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 interface CartItem {
   name: string;
@@ -48,8 +50,9 @@ const Cart = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="container mx-auto p-4 pt-6">
-      <h2 className="text-3xl font-bold mb-4">Cart</h2>
       <ul>
         {cart.map((item, index) => (
           <li key={item.name} className="flex justify-between mb-4">
@@ -100,7 +103,10 @@ const Cart = () => {
       <button className="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
         Place Order
       </button>
+      <div className='p-50'></div>
     </div>
+    <Footer />
+    </>
   );
 };
 

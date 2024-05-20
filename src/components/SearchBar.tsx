@@ -34,7 +34,7 @@ const MedicationCard = ({ result }: { result: Medication }) => {
         <p className="text-gray-600 text-sm">Price: <span className="font-bold">{result.price}</span></p>
         {result.discountedPrice && (
           <p className="text-gray-600 text-sm">Discounted Price: <span className="font-bold">{result.discountedPrice}</span></p>
-        )}e
+        )}
         <p className="text-gray-600 text-sm">Manufacturer: <span className="font-bold">{result.manufacturer}</span></p>
       </div>
       <div className="mt-2 flex items-center justify-center">
@@ -99,11 +99,11 @@ const SearchBar = () => {
           value={searchQuery}
           onChange={handleSearch}
         />
-        <button type="submit" className="bg-[#57BDDD] text-white px-4 py-2 rounded-md hover:bg-blue-600 flex flex-grow-">
+        <button type="submit" className="bg-[#57BDDD] text-white px-4 py-4 rounded-md hover:bg-blue-600 flex flex-grow-">
           Medication Search
         </button>
-        <label className="bg-[#57BDDD] text-white px-2 py-4 rounded-md hover:bg-blue-600" htmlFor="fileInput">
-          <MdFileUpload />
+        <label className="bg-[#57BDDD] text-white px-4 py-4 rounded-md hover:bg-blue-600" htmlFor="fileInput">
+          <MdFileUpload className='w-5 h-7'/>
         </label>
         <input id="fileInput" type="file" accept=".pdf, .jpg, .jpeg, .png, .gif" className="hidden" />
       </form>

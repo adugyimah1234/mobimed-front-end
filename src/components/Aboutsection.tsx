@@ -5,7 +5,7 @@ function Aboutsection() {
     <div className="p-20 container mx-auto md:p-6 lg:p-2 w-auto">
       {/* Header section */}
       <div className="flex flex-row justify-center items-center gap-6 w-[100%] box-border">
-        <div className="container w-auto h-0.5 border-2 border-[#57BDDD] border-solid" />
+        <div className="container max-w-40 h-0.5 border-2 border-[#57BDDD] border-solid" />
         <p className="  text-[#57BDDD] text-5xl leading-[113%] font-bold tracking-[5.52px] uppercase">
           WHY CHOOSE US
         </p>
@@ -27,7 +27,7 @@ function Aboutsection() {
           <div className="flex flex-row justify-center items-center gap-6 w-auto box-border">
             <div className="flex flex-col justify-start items-end gap-4 w-auto h-[100%] box-border">
               <p className="flex flex-col justify-end border-[#7a7a7aff] text-xl leading-[120%] text-right uppercase">
-                proffessional service
+                TeleHealth Consultations
               </p>
               <p className="flex flex-col justify-end border-[#a7a7a7ff] text-lg leading-[158%] text-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -44,7 +44,7 @@ function Aboutsection() {
           <div className="flex flex-row justify-start items-center gap-6">
             <div className="flex flex-col justify-start items-end gap-4 w-auto h-auto box-border">
               <p className="flex flex-col justify-end border-[#7a7a7aff] text-xl leading-[120%] text-right uppercase">
-                always on time
+                Health Screening
               </p>
               <p className="flex flex-col justify-end border-[#a7a7a7ff] text-lg leading-[158%] font-[300] text-right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -80,7 +80,7 @@ function Aboutsection() {
             />
             <div className="flex flex-col justify-start items-start gap-4 w-auto h-auto box-border">
               <p className="border-[#222222ff] text-xl leading-[120%] uppercase">
-                24 hours emergency service
+                Chronic Diease Management
               </p>
               <p className="border-[#a7a7a7ff] text-lg leading-[158%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -97,7 +97,7 @@ function Aboutsection() {
             />
             <div className="flex flex-col justify-start items-start gap-4 w-auto h-auto box-border">
               <p className="border-[#7a7a7aff] text-xl leading-[120%] uppercase">
-                flat rate fees
+                Specialty Medicine Delivery
               </p>
               <p className="border-[#a7a7a7ff] text-lg leading-[158%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.

@@ -36,8 +36,8 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between px-4 py-2 bg-whitesmoke">
-      <a href="/" className="block cursor-pointer">
-        <img src="src/assets/logo.png" alt="Logo" className="max-w-[50%] h-auto" />
+      <a href="/" className="pl-3 block cursor-pointer w-[20rem] h-auto">
+        <img src="src/assets/MobiMed logo.svg" alt="Logo" className="max-w-[30%] h-auto" />
       </a>
       <div className={`hidden lg:flex`}>
         {navLinks.map((link) => (

@@ -35,15 +35,15 @@ const Footer = () => {
 
   const getInTouch = [
     {
-      title: <><FaPhone /> +0123456789</>,
-      link: "tel:+0123456789",
+      title: <><FaPhone /> +233 557 804 447 <br /><>+233 509 557 551</></>,      
+      link: "tel:+233557804447",
     },
     {
-      title: <><FaEnvelope /> info@8pxlstudio</>,
-      link: "mailto:info@8pxlstudio",
+      title: <><FaEnvelope /> info@mobimedgh.com</>,
+      link: "info@mobimedgh.com",
     },
     {
-      title: <><FaLocationArrow /> 021 Hollywood Boulevard, LA</>,
+      title: <><FaLocationArrow /> Osu, Ako-Adjei Opposite Kingdom Books & Stationery</>,
       link: "#",
     },
   ];
@@ -52,9 +52,9 @@ const Footer = () => {
     <footer className="bg-black py-12 w-full px-12">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
-          <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+          <div className="w-[50%] md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
             <img
-              src="src/assets/logo-footer.png"
+              src="src/assets/MobiMed logo.svg"
               alt="main-logo"
               className="md:w-* md:h-*"
             />
@@ -64,7 +64,7 @@ const Footer = () => {
             <ul className="list-none mb-0">
               {companyInfo.map((item, index) => (
                 <li key={index}>
-                  <a href={item.link} className="font-medium text-[#dadada] text-gray-600 text-whitesmoke hover:text-gray-800">
+                  <a href={item.link} className="font-medium text-[#dadada] text-whitesmoke hover:text-gray-800">
                     {item.title}
                   </a>
                 </li>
