@@ -5,6 +5,7 @@ import Aboutsection from '../components/Aboutsection';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import SearchBar from '../components/SearchBar';
+import '../index.css';
 
 const Home = () => {
   return (

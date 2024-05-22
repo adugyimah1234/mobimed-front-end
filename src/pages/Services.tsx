@@ -45,7 +45,7 @@ function Services() {
   return (
     <div className="mx-auto pt-2 pb-1 bg-white shadow-md">
       <Navbar />
-      <img src="src/assets/servicehero.png" className="bg-cover flex justify-center items-center" />
+      <div  className="p-20 bgImge"></div>
       <div className="text-center mb-5 mt-10 items-start">
         <h2 className="text-3xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
           Our Services

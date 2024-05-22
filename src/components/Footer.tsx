@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'react'
+import '../index.css';
 import { FaFacebook, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaLocationArrow, FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
@@ -49,8 +50,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black py-12 w-full px-12">
-      <div className="container mx-auto">
+    <footer className=" inset-0 bg-black bg-opacity-80 bg-cover py-12 w-full px-12">
+      <div className=" bg container mx-auto ">
         <div className="flex flex-wrap justify-between">
           <div className="w-[50%] md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
             <img
@@ -84,7 +85,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-            <h5 className="text-lg font-bold text-white p-2 text-left">Join Our Company</h5>
+            <h5 className="text-lg font-bold text-[#57bddd] p-2 text-left">Join Our Company</h5>
             <form className="flex ">
               <input
                 type="email"
@@ -108,11 +109,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="border-b border-whitesmoke"></div>
-      <p className="text-center text-gray-600 p-10">
+        <div className="border-b border-whitesmoke"></div>
+      <p className="text-center text-white p-10">
         © 2025 Unpack. All Rights Reserved.
       </p>
+      </div>
     </footer>
   );
 };

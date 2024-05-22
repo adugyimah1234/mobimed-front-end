@@ -19,7 +19,7 @@ function Contact() {
       <Navbar />
       <div className="bg-gray-100 py-0 pd-5">
       <div
-          className="relative bg-[#2c9dc0] text-white py-16 px-20 flex justify-start items-center bg-cover bg-center"
+          className="relative  text-white py-16 px-20 flex justify-start items-center bg-cover bg-center"
           style={{ backgroundImage: 'url(src/assets/image.png)' }}
         >
           <h1 className="text-black text-5xl font-bold p-20  relative">
@@ -72,7 +72,7 @@ function Contact() {
                   </label>
                   <textarea
                     id="message"
-                    rows={5} // Use a number for the rows attribute
+                    rows={5} 
                     className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     required
                   ></textarea>

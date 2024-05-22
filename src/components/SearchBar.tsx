@@ -26,7 +26,7 @@ const MedicationCard = ({ result }: { result: Medication }) => {
   };
 
   return (
-    <div className={`bg-white shadow-md rounded-md p-4 flex flex-col items-center justify-start ${isFavorite ? 'esFav' : ''} ${isInCart ? 'enCarrito' : ''}`}>
+<div className={`bg-white shadow-md rounded-md p-4 flex flex-col items-center justify-start ${isFavorite ? 'esFav' : ''} ${isInCart ? 'enCarrito' : ''} animate-slide-fade`}>
       <img src={result.image} alt={result.name} className="w-24 h-24 object-cover rounded-full mb-2" />
       <h3 className="text-lg font-bold text-gray-800">{result.name}</h3>
       <p className="text-gray-600 text-sm">{result.description}</p>
