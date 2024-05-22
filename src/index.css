@@ -3,58 +3,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Poppins, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Global Styles */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333; /* Black */
+  background-color: #f9f9f9; /* Light gray */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #29AADF; /* Picton Blue */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 a {
-  font-weight: 500;
-  color: #57BDDD;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #2fb4dd;
+  text-decoration: none;
+  color: #27ADE2; /* Picton Blue 2 */
 }
 
+a:hover {
+  color: #55bce6; /* Picton Blue 600 */
+}
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #57BDDD;
+  background-color: #29AADF; /* Picton Blue */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #57BDDD;
-  background-color: #57BDDD;
-  color: whitesmoke;
+  background-color: #55bce6; /* Picton Blue 600 */
+}
+
+/* Utility Classes */
+
+.text-primary {
+  color: #29AADF; /* Picton Blue */
+}
+
+.text-secondary {
+  color: #27ADE2; /* Picton Blue 2 */
+}
+
+.bg-primary {
+  background-color: #29AADF; /* Picton Blue */
+}
+
+.bg-secondary {
+  background-color: #27ADE2; /* Picton Blue 2 */
+}
+
+/* Define the class that applies the animation */
+.animate-moving-background {
+  /* Apply the animation */
+  animation: moving-background 5s infinite;
+  /* Add some additional styles if needed */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 200px 100px 20px rgba(0, 0, 0, 0.2)
+}
+
+.shadow {
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Configure this in Tailwind.config.js */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    opacity: 1;
   }
 }
 
+.animate-text-slide {
+  animation: text-slide 10s infinite;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* Add this property */
+}
+
+@keyframes text-slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.bgImg {
+  background:url(assets/footer.png) no-repeat;
+
+}
