@@ -50,12 +50,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" inset-0 bg-black bg-opacity-80 bg-cover py-12 w-full px-12">
+    <footer className=" inset-0 bg-black bg-cover py-12 w-full px-12">
       <div className=" bg container mx-auto ">
         <div className="flex flex-wrap justify-between">
           <div className="w-[50%] md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
             <img
-              src="src/assets/MobiMed logo.svg"
+              src="/MobiMed logo.svg"
               alt="main-logo"
               className="md:w-* md:h-*"
             />

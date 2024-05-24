@@ -19,7 +19,7 @@ const Navbar = () => {
   const loginButton = (
     <a
       href="/login"
-      className="hidden lg:flex px-4 py-2 text-sm font-medium text-white rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+      className="hidden lg:flex px-4 py-2 text-sm font-medium text-[#27ADE2] rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
     >
       Log In
     </a>
@@ -28,7 +28,7 @@ const Navbar = () => {
   const signupButton = (
     <a
       href="/signup"
-      className="hidden ml-2 lg:flex px-4 py-2 text-sm font-medium text-white rounded-md bg-gradient-to-tr from-[#57BDDD] to-[#62c2df] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+      className="hidden ml-2 lg:flex px-4 py-2 text-sm font-medium text-white rounded-md bg-gradient-to-tr from-[#27ADE2] to-[#62c2df] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
     >
       Sign Up
     </a>
@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-4 py-2 bg-whitesmoke">
       <a href="/" className="pl-3 block cursor-pointer w-[20rem] h-auto">
-        <img src="src/assets/MobiMed logo.svg" alt="Logo" className="max-w-[30%] h-auto" />
+        <img rel="icon" src="/MobiMed logo.svg" alt="Logo" className="max-w-[30%] h-auto" />
       </a>
       <div className={`hidden lg:flex`}>
         {navLinks.map((link) => (
@@ -60,7 +60,7 @@ const Navbar = () => {
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute top-15 left-0 mt-2 py-2 w-full bg-white shadow-md rounded-md z-50 transition-all duration-300 ease-in-out transform opacity-100">
+          <ul className="absolute top-15 left-0 mt-2 py-2 w-full  bg-[#57BDDD] shadow-md rounded-md z-50 transition-all duration-300 ease-in-out transform opacity-100">
             {navLinks.map((link) => (
               <li key={link.href} className="px-4 py-1 hover:bg-gray-100">
                 <a href={link.href} className="text-gray-700 block font-medium">
@@ -71,7 +71,7 @@ const Navbar = () => {
             <li className="px-4 py-1">
               <a
                 href="/login"
-                className="block px-4 py-2 text-sm font-medium text-white rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                className="block px-4 py-2 text-sm font-medium border rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
               >
                 Log In
               </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
             <li className="px-4 py-1">
               <a
                 href="/signup"
-                className="block px-4 py-2 text-sm font-medium text-white rounded-md bg-gradient-to-tr from-[#57BDDD] to-[#62c2df] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                className="block px-4 py-2 text-sm font-medium rounded-md bg-gradient-to-tr from-[#29AADF] to-[#55bce6] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
               >
                 Sign Up
               </a>
@@ -87,7 +87,7 @@ const Navbar = () => {
           </ul>
         )}
       </div>
-      <div className="hidden lg:flex items-center">
+      <div className="hidden md:flex items-center">
         {loginButton}
         {signupButton}
       </div>

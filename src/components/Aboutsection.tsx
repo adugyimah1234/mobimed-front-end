@@ -12,7 +12,7 @@ function Aboutsection() {
       </div>
 
       {/* Main section */}
-      <div className="flex container w-auto flex-col justify-center items-center  w-[100%] box-border">
+      <div className="flex container flex-col justify-around items-center  w-[100%] box-border">
         <p className="flex flex-col justify-center border-[#222222ff] text-[50px] leading-[120%] font-sarabun font-[600] text-center uppercase">
           <span>
             the <span className="text-[#57BDDD]">best</span> Pharmacy services
@@ -21,22 +21,22 @@ function Aboutsection() {
       </div>
 
       {/* Features section */}
-      <div className=" p-10 container flex flex-row justify-center items-center">
+      <div className=" px-30 container flex flex-row justify-center items-center">
         <div className="flex flex-col justify-center items-center mx-left-30 gap-[153px]">
           {/* Feature 1 */}
           <div className="flex flex-row justify-center items-center gap-6 w-auto box-border">
             <div className="flex flex-col justify-start items-end gap-4 w-auto h-[100%] box-border">
-              <p className="flex flex-col justify-end border-[#7a7a7aff] text-xl leading-[120%] text-right uppercase">
+              <p className="flex flex-col md:size-fit justify-end border-[#7a7a7aff] text-xl leading-[120%] text-right uppercase">
                 TeleHealth Consultations
               </p>
               <p className="flex flex-col justify-end border-[#a7a7a7ff] text-lg leading-[158%] text-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              Connect with our healthcare professionals from the comfort of your own home. Get personalized advice and treatment plans via video calls or messaging.
               </p>
             </div>
             <img
               src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/dt9e4emuao7-232%3A8684?alt=media&token=4627f637-beee-4f9f-8b35-a2e674860978"
               alt="Not Found"
-              className="w-[90px] h-[90px]"
+              className=" md:size-fit w-auto h-auto"
             />
           </div>
 
@@ -47,24 +47,24 @@ function Aboutsection() {
                 Health Screening
               </p>
               <p className="flex flex-col justify-end border-[#a7a7a7ff] text-lg leading-[158%] font-[300] text-right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              Stay on top of your health with regular check-ups and tests. Identify potential health issues early and take proactive steps.
               </p>
             </div>
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/dt9e4emuao7-232%3A8701?alt=media&token=29a70509-ed64-46f6-b48c-2c7a46eb24ea"
+              src=" https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/dt9e4emuao7-232%3A8701?alt=media&token=29a70509-ed64-46f6-b48c-2c7a46eb24ea"
               alt="Not Found"
-              className="w-[90px] h-[90px]"
+              className=" md:size-fit w-[90px] h-[90px]"
             />
           </div>
         </div>
 
         {/* Image section */}
-        <div className="container mx-full md:p-6 lg:p-2 w-[50%]">
-          <div className="flex justify-center items-center flex-grow" style={{ minWidth: '300px' }}>
+        <div className="container mx-full lg:p-2">
+          <div className="flex justify-stretch items-center flex-grow" style={{ minWidth: '300px' }}>
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/unify-v3-copy.appspot.com/o/dt9e4emuao7-232%3A8757?alt=media&token=c7e7179a-6634-4f0f-a7eb-f96e7a7496de"
+              src="src/assets/aboutus.png"
               alt="Not Found"
-              className="w-full md:w-full md:h-[459px] mx-auto"
+              className="w-auto md:w-[550px] md:h-[459px] max-h-fit"
             />
           </div>
         </div>
@@ -83,7 +83,7 @@ function Aboutsection() {
                 Chronic Diease Management
               </p>
               <p className="border-[#a7a7a7ff] text-lg leading-[158%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              Get your prescription medications delivered right to your doorstep. Access hard-to-find and specialty medicines with ease.
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ function Aboutsection() {
                 Specialty Medicine Delivery
               </p>
               <p className="border-[#a7a7a7ff] text-lg leading-[158%]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              Get your prescription medications delivered right to your doorstep. Access hard-to-find and specialty medicines with ease.
               </p>
             </div>
           </div>

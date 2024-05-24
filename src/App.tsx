@@ -9,7 +9,7 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <div className=" pt-1">
+    <div className=" pt-1 px-10">
         <BrowserRouter>
           <Routes>
               <Route path="/" element={<Home />} />

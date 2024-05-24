@@ -5,38 +5,38 @@ import Footer from '../components/Footer';
 function Services() {
   const serviceItems = [
     {
-      image: 'src/assets/uploadPrescription.png',
+      image: 'src/assets/TeleHealth.jpg',
       title: 'TeleHealth Consultations',
       description: 'Connect with our healthcare professionals from the comfort of your own home. Get personalized advice and treatment plans via video calls or messaging.',
     },
     {
-      image: 'src/assets/payout.png',
+      image: 'src/assets/Health_Screening1.png',
       title: 'Health Screening',
       description: 'Stay on top of your health with regular check-ups and tests. Identify potential health issues early and take proactive steps.',
     },
     {
-      image: 'src/assets/dispatch.png',
+      image: 'src/assets/Specialty1.png',
       title: 'Specialty Medicine Delivery',
       description: 'Get your prescription medications delivered right to your doorstep. Access hard-to-find and specialty medicines with ease.',
     },
     {
-      image: 'src/assets/searchMedications.jpg',
+      image: 'src/assets/PostDischargeSupport.jpg',
       title: 'Post-Discharge Support',
       subtitle: '',
       description: 'Receive guidance and support after hospitalization. Ensure a smooth transition and continued care.',
     },
     {
-      image: 'src/assets/deliveryOptions.jpg',
+      image: 'src/assets/TherapyManagement.jpg',
       title: 'Medication Therapy Management',
       description: 'Get personalized guidance on medication use and potential interactions. Maximize the effectiveness of your medications.',
     },
     {
-      image: 'src/assets/customerSupport.jpg',
+      image: 'src/assets/AutoRefillProgramme.jpg',
       title: 'Auto-Refill Programme',
       description: "Never miss a dose with automatic refills and renewals. Stay on track with your medication regimen.",
     },
     {
-      image: 'src/assets/securityPrivacy.jpg',
+      image: 'src/assets/OTCProductDelivery.jpg',
       title: 'OTC Product Delivery',
       description: 'Get over-the-counter medications and health products delivered to your door. Conveniently manage your health and wellness.',
     },
@@ -45,7 +45,7 @@ function Services() {
   return (
     <div className="mx-auto pt-2 pb-1 bg-white shadow-md">
       <Navbar />
-      <div  className="p-20 bgImge"></div>
+      <img src="src/assets/herosection.png" />
       <div className="text-center mb-5 mt-10 items-start">
         <h2 className="text-3xl antialiased font-bold leading-snug tracking-normal text-blue-gray-900">
           Our Services
