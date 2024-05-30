@@ -19,7 +19,7 @@ const Navbar = () => {
   const loginButton = (
     <a
       href="/login"
-      className="hidden lg:flex px-4 py-2 text-sm font-medium text-[#27ADE2] rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+      className="hidden lg:flex px-4 py-2 text-sm font-medium text-[#29AADF] rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
     >
       Log In
     </a>
@@ -28,7 +28,7 @@ const Navbar = () => {
   const signupButton = (
     <a
       href="/signup"
-      className="hidden ml-2 lg:flex px-4 py-2 text-sm font-medium text-white rounded-md bg-gradient-to-tr from-[#27ADE2] to-[#62c2df] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+      className="hidden ml-2 lg:flex px-4 py-2 text-sm font-medium rounded-md bg-[#26a5e0] hover: text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
     >
       Sign Up
     </a>
@@ -48,10 +48,10 @@ const Navbar = () => {
       </div>
       <div className="lg:hidden">
         <button
-          className="focus:outline-none bg-transparent"
+          className="focus:outline-none bg-[#1497be]"
           onClick={handleToggle}
         >
-          <svg className={`h-6 w-6 text-gray-700 transition-transform duration-300 ${isOpen ? 'transform rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <svg className={`h-6 w-6 text-wrap-700 transition-transform duration-300 ${isOpen ? 'transform rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             {isOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -60,7 +60,7 @@ const Navbar = () => {
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute top-15 left-0 mt-2 py-2 w-full  bg-[#57BDDD] shadow-md rounded-md z-50 transition-all duration-300 ease-in-out transform opacity-100">
+          <ul className="absolute text-black top-15 left-0 mt-2 py-2 w-full  bg-white shadow-md rounded-md z-50 transition-all duration-300 ease-in-out transform opacity-100">
             {navLinks.map((link) => (
               <li key={link.href} className="px-4 py-1 hover:bg-gray-100">
                 <a href={link.href} className="text-gray-700 block font-medium">
@@ -79,7 +79,7 @@ const Navbar = () => {
             <li className="px-4 py-1">
               <a
                 href="/signup"
-                className="block px-4 py-2 text-sm font-medium rounded-md bg-gradient-to-tr from-[#29AADF] to-[#55bce6] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                className="block px-4 py-2 text-sm font-medium text-black rounded-md bg-gradient-to-tr from-[#57BDDD] to-[#62c2df] hover:bg-gradient-to-br focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
               >
                 Sign Up
               </a>
