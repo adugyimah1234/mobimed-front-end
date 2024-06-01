@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import  { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +7,6 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 1224 });
 
   const navLinks = [
     { href: '/', label: 'HOME' },
@@ -48,7 +46,7 @@ const Navbar = () => {
       </div>
       <div className="lg:hidden">
         <button
-          className="focus:outline-none bg-[#1497be]"
+          className="focus:outline-none bg-white text-primary"
           onClick={handleToggle}
         >
           <svg className={`h-6 w-6 text-wrap-700 transition-transform duration-300 ${isOpen ? 'transform rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -60,7 +58,7 @@ const Navbar = () => {
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute text-black top-15 left-0 mt-2 py-2 w-full  bg-white shadow-md rounded-md z-50 transition-all duration-300 ease-in-out transform opacity-100">
+          <ul className="absolute text-white top-15 left-0 mt-2 py-2 w-full  bg-white shadow-md rounded-md z-50 transition-all duration-300 ease-in-out transform opacity-100">
             {navLinks.map((link) => (
               <li key={link.href} className="px-4 py-1 hover:bg-gray-100">
                 <a href={link.href} className="text-gray-700 block font-medium">
